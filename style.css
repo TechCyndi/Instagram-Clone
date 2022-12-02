@@ -56,8 +56,14 @@ main {
 }
 
 .main-content {
-    max-width: 800px;
+    width: 900px;
+    overflow: hidden;
+    
+    /* max-width: 800px; */
     margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 /* STORY */
@@ -102,3 +108,123 @@ main {
     padding-top: 7px;
 }
 
+/* === POSTS === */
+
+.posts {
+    width: 60%;
+}
+
+/* == POST == */
+
+.post {
+    border: 1px solid #b7b7b7;
+    border-radius: 7px;
+    /* padding: 1rem; */
+    margin-top: 1.5rem;
+    width: 450px;
+}
+
+/* POST HEADER */
+
+.post-header {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.post-header .story-img {
+    width: 40px;
+    height: 40px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+}
+
+.post .header-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* background-color: purple; */
+}
+
+/* POST IMAGE */
+
+.post-content {
+    background-clip: content-box; /* check */
+}
+
+.post-content img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+/* ==== ASIDE ==== */
+
+.aside {
+    width: 40%;
+
+    background-color: aliceblue;
+}
+.profile{
+    display:flex;
+    flex-direction: row;
+
+}
+.along{
+        display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.placeholder{
+    border-radius: 50%;
+    width: 20%;
+    
+}
+.profile-username{
+    font-weight: 700;
+    margin-left: 20px;
+    
+    
+}
+.profile-name{
+font-weight: 200
+
+}
+.btn{
+  background-color: transparent;
+  color: blue;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* suggestion container styles */
+.suggest{
+    display: flex;
+    justify-content: space-around;
+}
+
+.suggest h4{
+    opacity: 0.5;
+}
+
+.person{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image img{
+    border-radius: 50%;
+    max-width: 60%;
+}
