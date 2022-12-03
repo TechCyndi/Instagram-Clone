@@ -8,10 +8,6 @@ body {
     box-sizing: border-box;
 }
 
-.wrapper {
-    /* display: flex; */
-}
-
 .sidebar {
     position: fixed;
     left: 0;
@@ -20,6 +16,7 @@ body {
     border-right: 1px solid #b7b7b7;
     width: 250px;
     height: 100vh;
+    padding-right: 18px;
 }
 
 .flexdirection > a {
@@ -29,9 +26,9 @@ body {
     gap: 1rem;
     text-decoration: none;
     color: black;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-size: 18px;
-    padding: 10px, 0px;
+    padding: 15px;
 }
 
 .logo img {
@@ -46,8 +43,8 @@ body {
 }
 
 .flexdirection > a:hover {
-    background-color: beige;
-    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 40px;
     /* padding: 10px 0px; */
 }
 
@@ -56,11 +53,16 @@ body {
     border-radius: 50%;
 }
 
+.sidebar .profile {
+    display: block;
+}
+
 /* ==== MAIN ==== */
 main {
     padding-inline: 5rem;
     padding-block: 1rem;
     margin-left: 250px;
+    background-color: rgb(247, 247, 247);
 }
 
 .main-content {
