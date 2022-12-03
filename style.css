@@ -1,3 +1,7 @@
+body {
+    font-family: 'Segoe UI';
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,10 +9,13 @@
 }
 
 .wrapper {
-    display: flex;
+    /* display: flex; */
 }
 
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
     padding-left: 25px;
     border-right: 1px solid #b7b7b7;
     width: 250px;
@@ -53,10 +60,11 @@
 main {
     padding-inline: 5rem;
     padding-block: 1rem;
+    margin-left: 250px;
 }
 
 .main-content {
-    width: 900px;
+    width: fit-content;
     overflow: hidden;
     
     /* max-width: 800px; */
@@ -112,6 +120,7 @@ main {
 
 .posts {
     width: 60%;
+    width: 450px;
 }
 
 /* == POST == */
@@ -128,6 +137,7 @@ main {
 
 .post-header {
     display: flex;
+    align-items: center;
     gap: 10px;
     padding: 10px;
 }
@@ -139,8 +149,9 @@ main {
 
 .post-header img {
     border-radius: 50%;
-    width: 90%;
-    height: 90%;
+    outline: 2px solid white;
+    width: 85%;
+    height: 85%;
 }
 
 .post .header-info {
@@ -149,6 +160,17 @@ main {
     justify-content: space-between; 
     align-items: center;
     /* background-color: purple; */
+}
+
+.post .header-info .texts p {
+    font-size: 12px;
+}
+
+.post .header-menu-toggle {
+    color: rgb(48, 48, 48);
+    margin-top: -25px;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 /* POST IMAGE */
@@ -163,68 +185,195 @@ main {
     object-fit: cover;
 }
 
+/* USER INTERACTION */
+.interaction {
+    padding: 12px;
+}
+.user-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-interaction img,
+.comment-box img {
+    width: 30px;
+}
+
+.interaction .icons img {
+    margin-right: 9px;
+}
+
+.interaction .post-owner {
+    font-weight: 700;
+}
+
+.interaction .comments-passage {
+    color: rgb(153, 153, 153);
+}
+
+.post-time {
+    font-size: 12px;
+    margin-top: 10px;
+    color: rgb(153, 153, 153);
+}
+
+/* COMMENT BOX */
+.comment-box {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.comment-box form {
+    flex: 1;
+    display: flex;
+}
+
+.comment-box form input {
+    width: 100%;
+    border: none;
+}
+
+.comment-box form input:focus {
+    outline: none;
+}
+
+.comment-box form input::placeholder {
+    font-size: .9rem;
+    color: rgb(153, 153, 153);
+}
+
+.comment-box button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    font-size: .95rem;
+    color: rgb(3, 137, 254);
+    font-weight: 600;
+}
+
+.comment-box form input:placeholder-shown + button {
+    opacity: .4;
+}
+
+
 
 /* ==== ASIDE ==== */
 
 .aside {
-    width: 40%;
+    width: 310px;
+    padding-top: 20px;
+    /* background-color: aliceblue; */
+}
 
-    background-color: aliceblue;
+.personal-person{
+    padding-bottom: 10px;
 }
-.profile{
-    display:flex;
-    flex-direction: row;
 
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
-.along{
-        display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.placeholder{
-    border-radius: 50%;
-    width: 20%;
-    
-}
-.profile-username{
-    font-weight: 700;
-    margin-left: 20px;
-    
-    
-}
-.profile-name{
-font-weight: 200
 
+
+/* ===== */
+
+.profile .imag img {
+    width: 60px;
 }
-.btn{
-  background-color: transparent;
-  color: blue;
-  border: none;
-  font-size: 15px;
-  font-weight: 500;
+
+.profile .prof {
+    width: 100%;
+    flex: 1;
 }
+
+.profile .prof p {
+    color: rgb(153, 153, 153);
+    line-height: 1;
+}
+
+/* ===== */
 
 /* suggestion container styles */
 .suggest{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .suggest h4{
     opacity: 0.5;
+    /* font-size: 15px; */
+}
+
+.suggest p{
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .person{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .flex{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-evenly;
+    align-items: center; */
 }
 
 .image img{
     border-radius: 50%;
-    max-width: 60%;
+    max-width: 65%;
+}
+
+.p-account{
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.person a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+.p-btn a{
+    color: rgb(3, 137, 254);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.person{
+    padding-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 10px;
+}
+
+ ul li {
+  display: inline;
+  opacity: 0.3;
+}
+
+ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.copyright p{
+    opacity: 0.3;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 20px;
 }
